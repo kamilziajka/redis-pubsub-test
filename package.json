@@ -1,0 +1,9 @@
+{
+  "name": "redis-pubsub-test",
+  "version": "0.1.0",
+  "description": "redis-pubsub-test",
+  "dependencies": {
+    "hiredis": "^0.4.1",
+    "redis": "^2.2.5"
+  }
+}

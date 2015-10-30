@@ -22,11 +22,10 @@ let timeout;
 client.on('pmessage', (pattern, channel) => {
   let worker = channel.split('-')[1];
 
-  let request = requests.get(worker) || 0;
-  requests.set(worker, ++request);
+  requests.set(worker, (requests.get(worker) || 0) + 1);
 
   clearTimeout(timeout);
-  timeout = setTimeout(print, 1000);
+  timeout = setTimeout(print, 100);
 });
 
 client.psubscribe('queue*');
